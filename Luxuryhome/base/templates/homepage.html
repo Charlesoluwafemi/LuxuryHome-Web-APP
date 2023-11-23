@@ -1,0 +1,12 @@
+{% extends 'navbar.html' %}
+
+<h1> {{ title }}</h1>
+
+{% block content %}
+
+
+{% for a in blog_list %}
+    {% include 'list-inline.html' with blog_post=a %}
+{% endfor %}
+
+{% endblock %}

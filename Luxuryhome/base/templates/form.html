@@ -1,0 +1,13 @@
+<!-- Debugging statement -->
+{% if obj.id %}
+    <p>Debug: obj.id is {{ obj.id }}</p>
+{% else %}
+    <p>Debug: obj.id is empty or not available</p>
+{% endif %}
+
+<!-- Your form -->
+<form method="post" action="{% url 'blog_post_update' post_id=obj.id %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Update</button>
+</form>

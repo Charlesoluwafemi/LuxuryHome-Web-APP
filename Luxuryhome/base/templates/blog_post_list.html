@@ -1,0 +1,6 @@
+{# Debugging: {{ object_list }} #}
+<div class='row'> 
+    {% for object in object_list %}
+        {% include 'list-inline.html' with blog_post=object %}
+    {% endfor %}
+</div>
